@@ -4,6 +4,7 @@ namespace App\Http\Controllers\PageArray;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PageArray\PageUpdateRequest;
+use App\Models\PageArray\ElementSecond;
 use App\Models\PageArray\Page;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
@@ -47,6 +48,16 @@ class PageController extends Controller
      */
     public function destroy(Page $page)
     {
+        if ($page->firstElement()->exists()) {
+            $page->firstElement->delete();
+        }
+        if ($page->secondElements()->exists()) {
+            $page->secondElements->each(fn (ElementSecond $secondElement) => $secondElement->delete());
+        }
+        if ($page->thirdElement()->exists()) {
+            $page->thirdElement->delete();
+        }
+
         return $page->delete();
     }
 
