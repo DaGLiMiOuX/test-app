@@ -51,9 +51,12 @@ class RelationPageController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, RelationPage $relationPage)
     {
-        //
+        if ($relationPage->firstElement()->exists()) {
+            // Do something...
+        }
+        return $relationPage->update($request->all());
     }
 
     /**
