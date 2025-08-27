@@ -5,9 +5,12 @@ namespace App\Models\RelationPage;
 use App\Models\Section;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+/**
+ * @mixin IdeHelperRelationElementSecond
+ */
 class RelationElementSecond extends Section
 {
-    /** @use HasFactory<\Database\Factories\PageFactory> */
+    /** @use HasFactory<\Database\Factories\RelationPage\RelationElementSecondFactory> */
     use HasFactory;
 
     /**

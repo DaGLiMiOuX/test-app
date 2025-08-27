@@ -10,9 +10,12 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Support\Collection;
 
+/**
+ * @mixin IdeHelperRelationPage
+ */
 class RelationPage extends Model
 {
-    /** @use HasFactory<\Database\Factories\PageFactory> */
+    /** @use HasFactory<\Database\Factories\RelationPage\RelationPageFactory> */
     use HasFactory;
 
     public final const DEFAULT_ORDER = [

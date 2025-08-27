@@ -1,0 +1,20 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    level: 8
+    paths:
+        - app
+    scanFiles:
+        - _ide_helper.php
+        - _ide_helper_models.php
+        - .phpstorm.meta.php
+    ignoreErrors:
+        -
+            identifier: missingType.generics
+        -
+            identifier: missingType.iterableValue
+        -
+            identifier: missingType.return
+        -
+            identifier: generics.notSubtype

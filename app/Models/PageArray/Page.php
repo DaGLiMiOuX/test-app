@@ -9,6 +9,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Support\Collection;
 
+/**
+ * @mixin IdeHelperPage
+ */
 class Page extends Model
 {
     /** @use HasFactory<\Database\Factories\PageArray\PageFactory> */

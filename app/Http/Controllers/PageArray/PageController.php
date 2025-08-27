@@ -75,6 +75,6 @@ class PageController extends Controller
      */
     public function sections(Page $page): array
     {
-        return $page->orderedSections();
+        return $page->orderedSections;
     }
 }
