@@ -55,6 +55,7 @@ class RelationPageController extends Controller
     {
         if ($relationPage->firstElement()->exists()) {
             // Do something...
+            // Something else
         }
         return $relationPage->update($request->all());
     }
