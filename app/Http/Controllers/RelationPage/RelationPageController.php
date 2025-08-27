@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\RelationPage;
 
 use App\Http\Controllers\Controller;
+use App\Models\RelationPage\RelationPage;
 use Illuminate\Http\Request;
 
 class RelationPageController extends Controller
@@ -28,7 +29,7 @@ class RelationPageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return RelationPage::create($request->all());
     }
 
     /**
